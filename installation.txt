@@ -1,0 +1,143 @@
+🎬 CHUNKED VIDEO DOWNLOADER — USER GUIDE
+
+📌 OVERVIEW
+This script ("downloader.py") is a fast, terminal-based video downloader designed to fetch videos (e.g. from YouTube) using multiple threads (chunked downloading) for better speed and performance.
+
+It provides:
+
+- Live progress tracking
+- Download speed and ETA
+- Multi-threaded downloading
+- Clean terminal UI
+
+---
+
+⚙️ REQUIREMENTS
+
+Before running the script, make sure you have:
+
+1. Python 3 installed
+2. Required tools:
+   - yt-dlp (recommended over youtube-dl)
+
+Install yt-dlp:
+
+pip install yt-dlp
+
+On Termux (if needed):
+
+pkg install python
+pip install yt-dlp
+
+---
+
+🚀 HOW TO RUN THE SCRIPT
+
+Step 1: Navigate to the script folder
+
+cd ~/path/to/your/script
+
+Step 2: Run the script
+
+python downloader.py
+
+If you made it executable:
+
+chmod +x downloader.py
+./downloader.py
+
+---
+
+📥 HOW TO USE
+
+1. After running, you will see a prompt:
+   
+   📎 Video URL (q to quit):
+
+2. Paste the video link (example):
+
+https://youtu.be/example
+
+3. Choose number of threads (optional):
+   
+   - Press Enter for default
+   - Or enter a number (1–16)
+
+4. The download will begin:
+   
+   - Progress will be shown
+   - Speed and ETA will update live
+
+5. File will be saved in the current directory
+
+---
+
+📂 OUTPUT LOCATION
+
+Downloaded videos are saved in the same folder where you run the script unless modified inside the code.
+
+---
+
+⚡ FEATURES
+
+- Multi-threaded downloading (faster than browser downloads)
+- Real-time progress display
+- Clean logs and status updates
+- Works in Termux / Linux environments
+
+---
+
+⚠️ NOTES
+
+- Internet speed affects performance
+- Some videos may be restricted or unavailable
+- High thread counts may not always increase speed (depends on server)
+
+---
+
+🛠️ TROUBLESHOOTING
+
+❌ "yt-dlp not found"
+→ Install it:
+
+pip install yt-dlp
+
+❌ Download fails
+→ Check:
+
+- Internet connection
+- Video availability
+- Correct URL format
+
+❌ Permission issues
+→ Run:
+
+chmod +x downloader.py
+
+---
+
+🧠 TIP
+
+For global usage (run from anywhere):
+
+Move script to PATH:
+
+mv downloader.py /data/data/com.termux/files/usr/bin/ytd
+chmod +x /data/data/com.termux/files/usr/bin/ytd
+
+Then run anywhere with:
+
+ytd
+
+---
+
+👨‍💻 AUTHOR NOTES
+
+This script is optimized for speed, clarity, and terminal usability.
+You can modify it to:
+
+- Change download folder
+- Customize UI
+- Add format selection (audio/video)
+
+==================================================
