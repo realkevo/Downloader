@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🎬 CHUNKED DOWNLOADER v7.3 (CLEAN UX)
+ CHUNKED DOWNLOADER v7.3 (CLEAN UX)
 ✔ Preview first (title + size)
 ✔ Ask save location AFTER preview
 ✔ Clean output (no junk logs)
@@ -54,9 +54,9 @@ def install_global():
     target_dir = preferred if preferred else bins[0]
     target_path = os.path.join(target_dir, "ytd")
 
-    print("\n🌍 GLOBAL INSTALL OPTION")
-    print(f"📌 Detected executable path: {target_dir}")
-    print("👉 This will allow running the script as: ytd")
+    print("\n GLOBAL INSTALL OPTION")
+    print(f" Detected executable path: {target_dir}")
+    print(" This will allow running the script as: ytd")
 
     choice = input("Install globally? (y/n): ").lower()
     if choice != 'y':
@@ -66,11 +66,11 @@ def install_global():
         shutil.copy(script_path, target_path)
         os.chmod(target_path, 0o755)
 
-        print(f"✅ Installed as: {target_path}")
-        print("🚀 You can now run: ytd")
+        print(f" Installed as: {target_path}")
+        print(" You can now run: ytd")
 
     except Exception as e:
-        print(f"❌ Install failed: {e}")
+        print(f" Install failed: {e}")
 
 # =========================
 # LOGGING
@@ -104,15 +104,15 @@ def ensure_dependencies():
     if os.path.exists(SETUP_FLAG) and dependencies_ok():
         return
 
-    log("⚠️ First-time setup or repair...", "WARN")
+    log(" First-time setup or repair...", "WARN")
     run_install()
 
     if dependencies_ok():
         with open(SETUP_FLAG, "w") as f:
             f.write("ok")
-        log("✅ Setup complete", "SUCCESS")
+        log(" Setup complete", "SUCCESS")
     else:
-        log("❌ Setup failed", "ERROR")
+        log(" Setup failed", "ERROR")
         sys.exit(1)
 
 # =========================
@@ -128,28 +128,28 @@ def get_threads():
             t = int(t) if t else 8
             return max(1, min(t, 16))
         except:
-            print("❌ Enter 1–16")
+            print(" Enter 1–16")
 
 def select_folder():
-    print("\n📁 Save location:")
+    print("\n Save location:")
     print("1. Current folder")
     print("2. New folder")
 
     choice = input("> ").strip()
     if choice == '2':
-        folder = input("📂 Folder name: ").strip()
+        folder = input(" Folder name: ").strip()
         if folder:
             os.makedirs(folder, exist_ok=True)
             os.chdir(folder)
-            log(f"📁 Using: {os.getcwd()}", "SUCCESS")
+            log(f" Using: {os.getcwd()}", "SUCCESS")
     else:
-        log(f"📁 Using current: {os.getcwd()}", "INFO")
+        log(f" Using current: {os.getcwd()}", "INFO")
 
 # =========================
 # PREVIEW
 # =========================
 def preview_video(url):
-    log("📊 Fetching video info...", "INFO")
+    log(" Fetching video info...", "INFO")
 
     try:
         cmd = ["yt-dlp", "--dump-json", "--no-download", "--quiet", url]
@@ -164,9 +164,9 @@ def preview_video(url):
         size_mb = filesize / 1024**2 if filesize else 0
 
         print(f"\n📹 {title[:60]}...")
-        print(f"👤 {uploader}")
-        print(f"⏱️  {duration//60:02d}:{duration%60:02d}")
-        print(f"📏 {size_mb:.1f} MB" if size_mb else "📏 Unknown size")
+        print(f" {uploader}")
+        print(f"  {duration//60:02d}:{duration%60:02d}")
+        print(f" {size_mb:.1f} MB" if size_mb else "📏 Unknown size")
 
         return title
 
@@ -180,7 +180,7 @@ def preview_video(url):
 def download(url, threads):
     threads = min(threads, 16)
 
-    log("🚀 Starting download...", "SUCCESS")
+    log(" Starting download...", "chill")
 
     cmd = [
         "yt-dlp",
@@ -212,7 +212,7 @@ def download(url, threads):
         bufsize=1
     )
 
-    # 🔥 Character-by-character streaming (handles \r progress updates)
+    #  Character-by-character streaming (handles \r progress updates)
     while True:
         ch = process.stdout.read(1)
         if not ch:
@@ -223,18 +223,18 @@ def download(url, threads):
     process.wait()
 
     if process.returncode == 0:
-        log("✅ Download complete", "SUCCESS")
+        log(" Download complete", "SUCCESS")
         return True
     else:
-        log("❌ Download failed", "ERROR")
+        log(" Download failed", "ERROR")
         return False
 
 # =========================
 # MAIN
 # =========================
 def main():
-    print("\n" + "🎬 CHUNKED DOWNLOADER v7.3".center(80, "="))
-    print("🚀 Clean UI • Fast • Smart")
+    print("\n" + "CHUNKED DOWNLOADER v7.3".center(80, "="))
+    print(" Clean UI • Fast • Smart")
 
     install_global()
     ensure_dependencies()
@@ -244,14 +244,14 @@ def main():
 
         url = get_url()
         if not url or url.lower() in ['q', 'quit']:
-            print("👋 Bye!")
+            print(" Bye!")
             break
 
         threads = get_threads()
 
         title = preview_video(url)
 
-        confirm = input(f"\n⬇️ Download '{title[:40]}...' ? (y/n): ").lower()
+        confirm = input(f"\n Download '{title[:40]}...' ? (y/n): ").lower()
         if confirm != 'y':
             continue
 
@@ -260,9 +260,9 @@ def main():
         success = download(url, threads)
 
         if success:
-            print(f"\n📂 Saved in: {os.getcwd()}")
+            print(f"\n Saved in: {os.getcwd()}")
 
-        if input("\n🔄 Next download? (y/n): ").lower() != 'y':
+        if input("\n Next download? (y/n): ").lower() != 'y':
             break
 
 # =========================
