@@ -69,7 +69,7 @@
     <h1>🎬 YTD YouTube Video Downloader</h1>
     <p>Fast • Multi-platform • Terminal Native • YouTube & Social Media Video Downloader</p>
 </header><div class="container"><div class="card">
-<h2>🚀 Overview</h2>
+<h2> Overview</h2>
 <p>
 <b>YTD (YouTube Video Downloader)</b> is a high-performance terminal-based video downloader built on <span class="highlight">yt-dlp</span>. 
 It is designed to download videos from <b>YouTube and supported social media platforms</b> including TikTok, Instagram, Facebook, Twitter/X, and more.
@@ -78,7 +78,7 @@ It is designed to download videos from <b>YouTube and supported social media pla
 It uses optimized download handling to ensure fast, stable, and reliable media downloads with real-time feedback.
 </p>
 </div><div class="card">
-<h2>🌍 Supported Environment</h2>
+<h2>Supported Environment</h2>
 <ul>
 <li>Termux (Android terminal environment)</li>
 <li>Linux distributions (Ubuntu, Debian, Arch, etc.)</li>
@@ -86,7 +86,7 @@ It uses optimized download handling to ensure fast, stable, and reliable media d
 <li>Active internet connection</li>
 </ul>
 </div><div class="card">
-<h2>⚙️ Dependencies (Auto-Handled)</h2>
+<h2> Dependencies (Auto-Handled)</h2>
 <p>
 This tool automatically installs required dependencies on first run.
 </p>
@@ -96,16 +96,16 @@ This tool automatically installs required dependencies on first run.
 </ul>
 <p><i>If auto-install fails, manual pip installation is supported.</i></p>
 </div><div class="card">
-<h2>🌍 Global Installation</h2>
+<h2>Global Installation</h2>
 <p>Once installed globally, the tool becomes available as a system command:</p>
 <pre>ytd</pre>
 <p>You can run it from any directory without typing Python or file paths.</p>
 </div><div class="card">
-<h2>📥 How to Run</h2>
+<h2> How to Run</h2>
 <pre>ytd</pre>
 <p>Launches the interactive downloader interface.</p>
 </div><div class="card">
-<h2>🧭 Step-by-Step Execution Flow</h2>
+<h2> Step-by-Step Execution Flow</h2>
 <ol>
 <li><b>Launch</b> – User runs <code>ytd</code></li>
 <li><b>Environment Check</b> – Verifies Python and dependencies</li>
@@ -120,7 +120,7 @@ This tool automatically installs required dependencies on first run.
 <li><b>Completion</b> – Displays success, speed, and location</li>
 </ol>
 </div><div class="card">
-<h2>⚡ Features</h2>
+<h2>Features</h2>
 <ul>
 <li>YouTube + social media video downloads</li>
 <li>High-speed optimized downloading</li>
@@ -130,10 +130,10 @@ This tool automatically installs required dependencies on first run.
 <li>Global CLI command: <code>ytd</code></li>
 </ul>
 </div><div class="card">
-<h2>📂 Output Behavior</h2>
+<h2> Output Behavior</h2>
 <p>All downloaded videos are saved in the current working directory unless changed in configuration.</p>
 </div><div class="card">
-<h2>⚠️ Notes</h2>
+<h2>Notes</h2>
 <ul>
 <li>Speed depends on internet and server limits</li>
 <li>Some content may be restricted by platform policies</li>
@@ -146,7 +146,7 @@ This tool automatically installs required dependencies on first run.
 <pre>pip install yt-dlp</pre><p><b>Permission issues</b></p>
 <pre>chmod +x /data/data/com.termux/files/usr/bin/ytd</pre>
 </div><div class="card">
-<h2>🧠 Summary</h2>
+<h2> Summary</h2>
 <p>
 YTD turns your terminal into a powerful <b>YouTube video downloader</b> with support for multiple platforms, automation, and global access.
 </p>
