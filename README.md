@@ -66,7 +66,7 @@
 </style>
 </head>
 <body><header>
-    <h1>🎬 YTD YouTube Video Downloader</h1>
+    <h1> YTD YouTube Video Downloader</h1>
     <p>Fast • Multi-platform • Terminal Native • YouTube & Social Media Video Downloader</p>
 </header><div class="container"><div class="card">
 <h2> Overview</h2>
@@ -140,7 +140,7 @@ This tool automatically installs required dependencies on first run.
 <li>Thread count does not always guarantee faster speed</li>
 </ul>
 </div><div class="card">
-<h2>🛠️ Troubleshooting</h2>
+<h2> Troubleshooting</h2>
 <p><b>Command not found (ytd)</b></p>
 <pre>which ytd</pre><p><b>Missing yt-dlp</b></p>
 <pre>pip install yt-dlp</pre><p><b>Permission issues</b></p>
