@@ -149,6 +149,7 @@ This tool automatically installs required dependencies on first run.
 <h2> Summary</h2>
 <p>
 YTD turns your terminal into a powerful <b>YouTube video downloader</b> with support for multiple platforms, automation, and global access.
+    Vibecoded using jailbroken Blackbox ai
 </p>
 <p><b>Global Command:</b> <code>ytd</code></p>
 </div></div><footer>
